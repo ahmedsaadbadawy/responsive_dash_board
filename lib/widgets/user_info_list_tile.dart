@@ -6,7 +6,8 @@ import '../models/users_info_model.dart';
 
 class UserInfoListTile extends StatelessWidget {
   const UserInfoListTile({
-    super.key, required this.usersInfoModel,
+    super.key,
+    required this.usersInfoModel,
   });
   final UsersInfoModel usersInfoModel;
   @override
@@ -19,11 +20,11 @@ class UserInfoListTile extends StatelessWidget {
           leading: SvgPicture.asset(usersInfoModel.image),
           title: Text(
             usersInfoModel.title,
-            style: AppStyles.styleSemiBold16,
+            style: AppStyles.styleSemiBold16(context),
           ),
           subtitle: Text(
             usersInfoModel.subTitle,
-            style: AppStyles.styleRegular12,
+            style: AppStyles.styleRegular12(context),
           ),
         ),
       ),
