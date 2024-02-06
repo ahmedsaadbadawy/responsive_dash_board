@@ -10,7 +10,6 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
-    print(width);
     return AspectRatio(
       aspectRatio: 420 / 215,
       child: Container(
@@ -66,13 +65,15 @@ class MyCard extends StatelessWidget {
                     )
                   : Text(
                       '0918 8124 0042 8129',
-                      style: AppStyles.styleMedium20(context).copyWith(
+                      style: AppStyles.styleSemiBold24(context).copyWith(
                         color: Colors.white,
                       ),
                     ),
             ),
-            const SizedBox(
-              height: 54 - 28,
+            const Flexible(
+              child: SizedBox(
+                height: 54 - 28,
+              ),
             ),
           ],
         ),
